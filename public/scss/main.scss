@@ -1,0 +1,45 @@
+@import 'reset';
+@import 'helpers';
+@import 'components/buttons';
+@import 'components/navbar';
+@import 'components/form';
+@import 'components/editor';
+@import 'components/grid';
+
+.login {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .form {
+        width: 500px;
+        height: auto;
+        padding: 15px;
+        border: solid 1px #dddddd;
+    }
+}
+
+b,
+strong {
+    font-weight: 700 !important;
+}
+
+
+.card {
+    width: 90%;
+    height: auto;
+    margin: 30px auto;
+    display: block;
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 30px;
+    border: solid 1px #dddddd;
+}
+
+a.disabled {
+    color: #dddddd;
+    cursor: not-allowed;
+}

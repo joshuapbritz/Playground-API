@@ -1,0 +1,22 @@
+<div class="container">
+    {{#each articles.records}}
+    <a href="/blog/posts/{{this._id}}" class="card">
+        <h2>{{this.title}}</h2>
+    </a>
+    {{/each}}
+</div>
+
+<div class="pager center-text">
+    {{#if articles.hasLast}}
+    <a href="/blog?p={{articles.lastPage}}">back</a>
+    {{else}}
+    <a class="disabled">back</a>
+    {{/if}}
+    <a href="/blog?p=1">1</a>
+    <a href="/blog?p={{articles.pages}}">{{articles.pages}}</a>
+    {{#if articles.hasNext}}
+    <a href="/blog?p={{articles.nextPage}}">next</a>
+    {{else}}
+    <a class="disabled">next</a>
+    {{/if}}
+</div>

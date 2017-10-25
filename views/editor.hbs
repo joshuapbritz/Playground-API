@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-1-of-2">
+            <div class="editor">
+                <div class="toolbar">
+                    <h1 onkeyup="changeTitle(this)" style="background-color: #eee; padding: 0 10px;" contenteditable="true">Article Name</h1>
+                    <form action="/editor/save" method="POST">
+                        <input type="hidden" name="title" id="title-send">
+                        <input type="hidden" name="mkd" id="mkd-send">
+                        <button type="submit" class="save">save</button>
+                    </form>
+                </div>
+                <textarea onkeyup="updateChange(this)" name="content" id="content" class="content" style="white-space:pre-wrap"></textarea>
+            </div>
+        </div>
+        <div class="col-1-of-2">
+            <div class="editor">
+                <div class="toolbar">
+                    <h1 id="preview-title">Article Name</h1>
+                    <small>preview</small>
+                </div>
+                <div id="preview" class="content"></div>
+            </div>
+        </div>
+    </div>
+</div>
