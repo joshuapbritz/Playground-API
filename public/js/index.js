@@ -2,7 +2,7 @@
 function updateChange($this) {
     var html = $this.value;
     document.getElementById('mkd-send').value = html;
-    renderMarkup('http://localhost:4500/editor/render', html, function(res) {
+    renderMarkup(location.host + '/editor/render', html, function(res) {
         document.getElementById('preview').innerHTML = res;
     });
 }
